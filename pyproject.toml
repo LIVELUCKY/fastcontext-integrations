@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fastcontext-mcp"
+version = "0.1.0"
+description = "MCP server that exposes microsoft/fastcontext (a read-only repository explorer) to coding agents."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "LIVELUCKY" }]
+keywords = ["mcp", "fastcontext", "coding-agent", "code-search", "model-context-protocol"]
+# Zero runtime dependencies — the server is pure Python standard library.
+# The `fastcontext` explorer CLI is installed separately (see README / docs/SETUP.md).
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/LIVELUCKY/fastcontext-integrations"
+Repository = "https://github.com/LIVELUCKY/fastcontext-integrations"
+
+[project.scripts]
+fastcontext-mcp = "fastcontext_mcp:main"
+
+[tool.hatch.build.targets.wheel]
+include = ["fastcontext_mcp.py"]

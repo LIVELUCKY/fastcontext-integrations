@@ -1,0 +1,22 @@
+# FastContext trajectory logs (the CLI writes these in the explored repo)
+.fastcontext/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# User-specific MCP config (model/endpoint is local; use examples/ as template)
+.mcp.json
+
+# Env / secrets — never commit your endpoint key
+.env
+*.local
+
+# OS / editor
+.DS_Store
+*.swp
